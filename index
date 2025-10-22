@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marwok "Mo" Gure - Data & Evaluation Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            page-break-after: always;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .hero .tagline {
+            font-size: 1.1em;
+            margin-top: 30px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* INTRO SECTION */
+        .intro-section {
+            padding: 60px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        .intro-text h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .intro-text p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            color: white;
+        }
+        
+        .highlight-box h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box ul {
+            list-style: none;
+        }
+        
+        .highlight-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .highlight-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* SKILLS SECTION */
+        .skills-section {
+            padding: 60px;
+            background: #f8f9fa;
+        }
+        
+        .skills-section h2 {
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #2c3e50;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-top: 4px solid #667eea;
+        }
+        
+        .skill-card h3 {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .skill-card ul {
+            list-style: none;
+        }
+        
+        .skill-card li {
+            padding: 5px 0;
+            color: #555;
+            font-size: 0.95em;
+        }
+        
+        .tech-highlight {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .tech-highlight h3 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .tech-tag {
+            background: white;
+            color: #667eea;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        /* PROJECT SECTIONS */
+        .project-section {
+            padding: 60px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .section-header p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-left: 6px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .project-card.featured {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-left: 6px solid #ffd700;
+        }
+        
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .project-header h3 {
+            font-size: 1.6em;
+            flex: 1;
+        }
+        
+        .featured-badge {
+            background: #ffd700;
+            color: #2c3e50;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.7em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .project-summary {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+            align-items: start;
+        }
+        
+        .summary-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+        
+        .project-card:not(.featured) .summary-icon {
+            background: #667eea;
+            color: white;
+        }
+        
+        .summary-content {
+            padding-top: 5px;
+        }
+        
+        .summary-label {
+            font-weight: 700;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            opacity: 0.8;
+        }
+        
+        .project-card:not(.featured) .summary-label {
+            color: #667eea;
+        }
+        
+        .summary-text {
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+        
+        .project-card:not(.featured) .summary-text {
+            color: #2c3e50;
+        }
+        
+        .tools-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .project-card:not(.featured) .tools-section {
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .tools-label {
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+        
+        .tool-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tool-tag {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        .project-card.featured .tool-tag {
+            background: rgba(255,255,255,0.25);
+            color: white;
+        }
+        
+        .project-card:not(.featured) .tool-tag {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .view-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1em;
+        }
+        
+        .project-card.featured .view-btn {
+            background: white;
+            color: #667eea;
+        }
+        
+        .project-card:not(.featured) .view-btn {
+            background: #667eea;
+            color: white;
+        }
+        
+        .view-btn:hover {
+            transform: translateX(5px);
+        }
+        
+        /* ADDITIONAL PROJECTS GRID */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .compact-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-top: 4px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+        
+        .compact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+        
+        .compact-card h3 {
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        
+        .compact-card p {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .compact-card .tool-tags {
+            margin-top: 15px;
+        }
+        
+        /* CONTACT SECTION */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .contact-item {
+            background: rgba(255,255,255,0.15);
+            padding: 25px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255,255,255,0.25);
+            transform: scale(1.05);
+        }
+        
+        .contact-item .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        /* EDUCATION SECTION */
+        .education-section {
+            padding: 60px;
+            background: #f8f9fa;
+        }
+        
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .education-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #667eea;
+        }
+        
+        .education-card h3 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .education-card .degree {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .education-card .year {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        /* METRICS DISPLAY */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .metric-box {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .project-card:not(.featured) .metric-box {
+            background: white;
+            border: 2px solid #667eea;
+        }
+
+        .metric-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .metric-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .metric-sublabel {
+            font-size: 0.8em;
+            opacity: 0.75;
+            margin-top: 5px;
+        }
+
+        .project-card:not(.featured) .metric-number {
+            color: #667eea;
+        }
+
+        .project-card:not(.featured) .metric-label {
+            color: #2c3e50;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .intro-section {
+                grid-template-columns: 1fr;
+                padding: 40px 30px;
+            }
+            
+            .project-section {
+                padding: 40px 30px;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media print {
+            .page {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PAGE 1: HERO & INTRO -->
+    <div class="page">
+        <div class="hero">
+            <h1>MARWOK "MO" GURE</h1>
+            <p class="subtitle">Data & Evaluation Professional</p>
+            <p class="tagline">7+ years transforming data into actionable insights for community impact programs</p>
+        </div>
+        
+        <div class="intro-section">
+            <div class="intro-text">
+                <h2>Hi, I'm Mo</h2>
+                <p>I specialize in building evaluation systems that help organizations understand their impact and improve their programs. My work sits at the intersection of data, community programs, and strategic decision-making.</p>
+                
+                <p>I've designed monitoring and evaluation frameworks, managed cross-functional teams, and created data systems that empower program staff to track outcomes and demonstrate impact. I bring both technical expertise and cultural competency to high-need communities.</p>
+                
+                <p>What drives me is making information useful—turning complex datasets into clear insights that guide real decisions and support meaningful change.</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Core Strengths</h3>
+                <ul>
+                    <li>Evaluation framework design & MEL systems</li>
+                    <li>Survey development & data collection</li>
+                    <li>Stakeholder reporting & data visualization</li>
+                    <li>Participatory evaluation methods</li>
+                    <li>100% compliance track record</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PAGE 2: SKILLS & EDUCATION -->
+    <div class="page">
+        <div class="skills-section">
+            <h2>Technical Proficiencies</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>📊 Data & Analysis</h3>
+                    <ul>
+                        <li>Program evaluation frameworks</li>
+                        <li>Impact measurement & logic models</li>
+                        <li>Quantitative & qualitative research</li>
+                        <li>Survey design & thematic analysis</li>
+                        <li>Statistical analysis & reporting</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>🛠️ Technical Tools</h3>
+                    <ul>
+                        <li>Survey Platforms: Qualtrics, Google Forms, SurveyMonkey</li>
+                        <li>Analytics: Excel (Advanced), Tableau, SQL, Python, R</li>
+                        <li>Project Management: Asana, Salesforce</li>
+                        <li>Microsoft Office & Google Workspace</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>⚖️ Compliance & Regulation</h3>
+                    <ul>
+                        <li>LIHTC & Section 8 housing compliance</li>
+                        <li>Internal audits & policy reviews</li>
+                        <li>HIPAA-compliant data management</li>
+                        <li>Case file & documentation protocols</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>🤝 Cultural Competency</h3>
+                    <ul>
+                        <li>Bilingual: Somali & English</li>
+                        <li>Experience with refugee populations</li>
+                        <li>Youth development (ages 5-24)</li>
+                        <li>Culturally responsive & trauma-informed</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="tech-highlight">
+                <h3>Relevant to Interfaith America Role</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Qualtrics</span>
+                    <span class="tech-tag">Alchemer</span>
+                    <span class="tech-tag">Asana</span>
+                    <span class="tech-tag">Salesforce</span>
+                    <span class="tech-tag">Tableau</span>
+                    <span class="tech-tag">Excel Advanced</span>
+                    <span class="tech-tag">SharePoint</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="education-section">
+            <div class="section-header">
+                <h2>Education & Certifications</h2>
+            </div>
+            
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Georgia State University</h3>
+                    <p class="degree">BA in Applied Linguistics with TEFL Certification</p>
+                    <p class="year">2015</p>
+                </div>
+                
+                <div class="education-card">
+                    <h3>Google Professional Certificate</h3>
+                    <p class="degree">Google Data Analytics Professional Certificate</p>
+                    <p class="year">2022</p>
+                </div>
+                
+                <div class="education-card">
+                    <h3>Technology of Participation (ToP)</h3>
+                    <p class="degree">ToP Facilitator Certification</p>
+                    <p class="year">2024</p>
+                </div>
+                
+                <div class="education-card">
+                    <h3>Ignite Network</h3>
+                    <p class="degree">Making Meaning with Multiple Datasets (M3) Facilitator</p>
+                    <p class="year">2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PAGE 3: FEATURED - WOMAN KIND PROJECTS -->
+    <div class="page">
+        <div class="project-section">
+            <div class="section-header">
+                <h2>Featured: Women's Economic Empowerment MEL</h2>
+                <p>International development evaluation projects with Woman Kind</p>
+            </div>
+            
+            <div class="project-card featured">
+                <div class="project-header">
+                    <h3>Impact Measurement Framework</h3>
+                    <span class="featured-badge">Featured Project</span>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">🎯</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Challenge</div>
+                        <div class="summary-text">Design comprehensive MEL system to track women's economic empowerment outcomes across 500 participants using mixed-methods approach</div>
+                    </div>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">⚡</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Solution</div>
+                        <div class="summary-text">Built complete Theory of Change framework with KPI dashboard, pre/post surveys (n=500), monthly tracking, and qualitative data collection through focus groups and success stories</div>
+                    </div>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">📊</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Impact</div>
+                        <div class="summary-text">Achieved 97% training completion, 34% average income increase, and 4.2/5 self-efficacy scores—providing robust evidence for program effectiveness and donor reporting</div>
+                    </div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <div class="metric-number">487</div>
+                        <div class="metric-label">Women Trained</div>
+                        <div class="metric-sublabel">↑ 97% of target</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-number">178</div>
+                        <div class="metric-label">New Businesses</div>
+                        <div class="metric-sublabel">↑ 89% of target</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-number">34%</div>
+                        <div class="metric-label">Avg Income Increase</div>
+                        <div class="metric-sublabel">↑ Above baseline</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-number">4.2</div>
+                        <div class="metric-label">Self-Efficacy Score</div>
+                        <div class="metric-sublabel">Scale: 1-5</div>
+                    </div>
+                </div>
+                
+                <div class="tools-section">
+                    <div class="tools-label">Methods & Tools Used</div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Theory of Change</span>
+                        <span class="tool-tag">Mixed Methods</span>
+                        <span class="tool-tag">Pre/Post Surveys</span>
+                        <span class="tool-tag">Focus Groups (12)</span>
+                        <span class="tool-tag">KPI Dashboard</span>
+                        <span class="tool-tag">Excel</span>
+                    </div>
+                </div>
+                
+                <button class="view-btn">View Full Framework →</button>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Participatory Evaluation Initiative</h3>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">🎯</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Challenge</div>
+                        <div class="summary-text">Engage 50+ program beneficiaries across 3 regions in authentic evaluation process to capture lived experiences and program recommendations</div>
+                    </div>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">⚡</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Solution</div>
+                        <div class="summary-text">Facilitated 6 workshops using participatory methods (body mapping, storytelling, ranking). Led collaborative analysis with participants to identify themes and co-create policy brief</div>
+                    </div>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">📊</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Impact</div>
+                        <div class="summary-text">Findings led to 5 program adaptations, secured 100% funding renewal through 3 donor presentations, and extended program cycle from 6 to 9 months based on beneficiary input</div>
+                    </div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <div class="metric-number">50+</div>
+                        <div class="metric-label">Participants Engaged</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-number">6</div>
+                        <div class="metric-label">Workshops Led</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-number">100%</div>
+                        <div class="metric-label">Funding Secured</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="metric-number">5</div>
+                        <div class="metric-label">Program Changes</div>
+                    </div>
+                </div>
+                
+                <div class="tools-section">
+                    <div class="tools-label">Methods & Tools Used</div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Participatory Methods</span>
+                        <span class="tool-tag">Facilitation</span>
+                        <span class="tool-tag">Thematic Analysis</span>
+                        <span class="tool-tag">Policy Brief Writing</span>
+                        <span class="tool-tag">Donor Presentations</span>
+                    </div>
+                </div>
+                
+                <button class="view-btn">View Policy Brief →</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PAGE 4: YOUTH PROGRAM MEL PROJECTS -->
+    <div class="page">
+        <div class="project-section">
+            <div class="section-header">
+                <h2>Youth Program Evaluation & MEL</h2>
+                <p>Monitoring, evaluation, and learning frameworks for afterschool programs</p>
+            </div>
+            
+            <div class="project-card featured">
+                <div class="project-header">
+                    <h3>ACLG Evaluation Framework</h3>
+                    <span class="featured-badge">Featured Project</span>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">🎯</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Challenge</div>
+                        <div class="summary-text">Three youth programs lacked unified evaluation framework to track effectiveness and meet grant compliance requirements</div>
+                    </div>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">⚡</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Solution</div>
+                        <div class="summary-text">Designed comprehensive MEL framework using M3 methodology, including evaluation timelines, data collection protocols, logic models, and continuous program improvement processes</div>
+                    </div>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">📊</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Impact</div>
+                        <div class="summary-text">Framework now drives strategic decisions across all program sites, ensures grant compliance, and provides actionable insights for program enhancement</div>
+                    </div>
+                </div>
+                
+                <div class="tools-section">
+                    <div class="tools-label">Tools & Methods Used</div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Qualtrics</span>
+                        <span class="tool-tag">Excel</span>
+                        <span class="tool-tag">Asana</span>
+                        <span class="tool-tag">M3 Framework</span>
+                        <span class="tool-tag">YPQA</span>
+                        <span class="tool-tag">Mixed Methods</span>
+                    </div>
+                </div>
+                
+                <button class="view-btn">View Full Framework Document →</button>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Youth-to-Youth Survey Analysis</h3>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">🎯</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Challenge</div>
+                        <div class="summary-text">Program leaders needed actionable insights from youth survey data to design relevant summer programming across five thematic areas</div>
+                    </div>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">⚡</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Solution</div>
+                        <div class="summary-text">Analyzed and visualized multi-site survey data, translating complex findings into clear dashboards and strategic recommendations</div>
+                    </div>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">📊</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Impact</div>
+                        <div class="summary-text">Analysis directly informed summer programming design, improved alignment with youth preferences, and increased program relevance</div>
+                    </div>
+                </div>
+                
+                <div class="tools-section">
+                    <div class="tools-label">Tools & Methods Used</div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">SurveyMonkey</span>
+                        <span class="tool-tag">Excel</span>
+                        <span class="tool-tag">Data Visualization</span>
+                        <span class="tool-tag">Tableau</span>
+                    </div>
+                </div>
+                
+                <button class="view-btn">View Data Presentation →</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PAGE 5: IMPACT REPORTING & STAKEHOLDER ENGAGEMENT -->
+    <div class="page">
+        <div class="project-section">
+            <div class="section-header">
+                <h2>Impact Reporting & Stakeholder Engagement</h2>
+                <p>Visual reports and participatory evaluation projects</p>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Elevate Youth! Impact Report</h3>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">🎯</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Challenge</div>
+                        <div class="summary-text">Stakeholders needed compelling evidence of program impact beyond raw numbers</div>
+                    </div>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">⚡</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Solution</div>
+                        <div class="summary-text">Created visual reports combining quantitative outcomes with qualitative youth testimonials</div>
+                    </div>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">📊</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Impact</div>
+                        <div class="summary-text">Reports strengthened stakeholder buy-in and supported program expansion to new school sites</div>
+                    </div>
+                </div>
+                
+                <div class="tools-section">
+                    <div class="tools-label">Tools & Methods Used</div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Tableau</span>
+                        <span class="tool-tag">Excel</span>
+                        <span class="tool-tag">Visual Design</span>
+                        <span class="tool-tag">Qualitative Analysis</span>
+                    </div>
+                </div>
+                
+                <button class="view-btn">View Sample Report →</button>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Photovoice: Anti-Hate in Schools</h3>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">🎯</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Challenge</div>
+                        <div class="summary-text">School leaders lacked authentic student perspectives on diversity, inclusion, and school climate issues</div>
+                    </div>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">⚡</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Solution</div>
+                        <div class="summary-text">Facilitated participatory evaluation using Photovoice methodology with concept mapping and thematic analysis</div>
+                    </div>
+                </div>
+                
+                <div class="project-summary">
+                    <div class="summary-icon">📊</div>
+                    <div class="summary-content">
+                        <div class="summary-label">Impact</div>
+                        <div class="summary-text">Visual narratives sparked deeper administrative conversations around equity and informed policy discussions</div>
+                    </div>
+                </div>
+                
+                <div class="tools-section">
+                    <div class="tools-label">Tools & Methods Used</div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Photovoice</span>
+                        <span class="tool-tag">Qualitative Research</span>
+                        <span class="tool-tag">Facilitation</span>
+                        <span class="tool-tag">Thematic Analysis</span>
+                    </div>
+                </div>
+                
+                <button class="view-btn">View Project Report →</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PAGE 6: ADDITIONAL PROJECTS -->
+    <div class="page">
+        <div class="project-section">
+            <div class="section-header">
+                <h2>Additional Projects & Systems</h2>
+                <p>Program operations, co-design processes, and data management systems</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="compact-card">
+                    <h3>Youth Co-Design: Elevate Rebrand</h3>
+                    <p>Facilitated strategic focus group with youth to rebrand ACLG program. Developed "Elevate Youth!" identity rooted in Access, Belonging, and Trust themes.</p>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Facilitation</span>
+                        <span class="tool-tag">Co-Design</span>
+                        <span class="tool-tag">Stakeholder Engagement</span>
+                    </div>
+                </div>
+                
+                <div class="compact-card">
+                    <h3>Summer Programming Calendar</h3>
+                    <p>Created color-coded Excel calendar coordinating programming across three school sites with different timelines and staffing needs.</p>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Excel</span>
+                        <span class="tool-tag">Project Management</span>
+                        <span class="tool-tag">Operations</span>
+                    </div>
+                </div>
+                
+                <div class="compact-card">
+                    <h3>M3 Huddle Data Preparation</h3>
+                    <p>Cleaned and merged three data sources (surveys, YPQA, attendance) into unified Excel system supporting strategic cross-site discussions.</p>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Excel</span>
+                        <span class="tool-tag">Data Management</span>
+                        <span class="tool-tag">M3 Framework</span>
+                    </div>
+                </div>
+                
+                <div class="compact-card">
+                    <h3>Attendance Tracking System</h3>
+                    <p>Developed intuitive Excel tracking sheet automatically logging service hours through daily attendance entries for school-based affinity groups.</p>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Excel</span>
+                        <span class="tool-tag">Data Systems</span>
+                        <span class="tool-tag">Grant Compliance</span>
+                    </div>
+                </div>
+                
+                <div class="compact-card">
+                    <h3>FAFSA Navigator Training</h3>
+                    <p>Led training session for 188 navigators. Designed multilingual flyer (4 languages) and post-training survey to gather feedback and measure impact.</p>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Training</span>
+                        <span class="tool-tag">SurveyMonkey</span>
+                        <span class="tool-tag">Multilingual Design</span>
+                    </div>
+                </div>
+                
+                <div class="compact-card">
+                    <h3>Youth OnBoard Marketing</h3>
+                    <p>Redesigned youth civic engagement materials including board/commission one-pagers and Brooklyn Youth Council flyer based on youth feedback.</p>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Visual Design</span>
+                        <span class="tool-tag">Youth Engagement</span>
+                        <span class="tool-tag">Marketing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PAGE 7: CONTACT -->
+    <div class="page">
+        <div class="contact-section">
+            <h2>Let's Connect</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:marwokgure@gmail.com">marwokgure@gmail.com</a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="icon">📱</div>
+                    <h3>Phone</h3>
+                    <a href="tel:612-405-9450">612-405-9450</a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="icon">💼</div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/marwok-gure" target="_blank">linkedin.com/in/marwok-gure</a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="icon">💻</div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/marwokgure" target="_blank">github.com/marwokgure</a>
+                </div>
+            </div>
+            
+            <div style="margin-top: 60px; padding-top: 40px; border-top: 2px solid rgba(255,255,255,0.2);">
+                <p style="font-size: 1.1em; opacity: 0.9;">📍 Based in Minneapolis, Minnesota</p>
+                <p style="font-size: 1.1em; opacity: 0.9; margin-top: 10px;">Available for remote work in IL, DC, MA, MD, MI, NC, OH, VA, and WI</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
